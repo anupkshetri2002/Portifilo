@@ -5,18 +5,22 @@ const Header = ({darkMode,setDarkMode}) => {
     
 
   return (
-    <header className={`bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}>
+    <header className={`bg-white dark:bg-gray-900 text-gray-900 dark:text-teal-300`}>
         <nav className="flex justify-between items-center p-5">
-            <h1 className='text-lg text-blue-600'>
+            <h1 className='text-lg'>
                 Aeries
             </h1>
             <div onClick={() => setDarkMode(!darkMode)}>
-              <MdNightsStay className='text-2xl cursor-pointer'/>
-              <MdWbSunny className='text-2xl cursor-pointer'/>
+              { darkMode ?(
+                <MdWbSunny className='text-2xl cursor-pointer'/>
+              ):(
+
+               <MdNightsStay className='text-2xl cursor-pointer'/>   
+              )}
             </div>
         </nav>
     </header>
-  )
-}
+  );
+              };
 
 export default Header;
