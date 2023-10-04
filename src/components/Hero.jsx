@@ -22,17 +22,17 @@ const SOCIAL =[
 ];  
 window.addEventListener('scroll', function (){
     const downArrow = document.querySelector(".down-arrow");
-
-    if(this.scrolly >= 90) downArrow.classList.add("hide-down-arrow");
+    // console.log(this.scrollY);
+    if(this.scrollY >= 400) downArrow.classList.add("hide-down-arrow");
     else downArrow.classList.remove("hide-down-arrow");
 });
 
   return (
   <section className='min-h-screen flex flex-col justify-start
    items-center p-5 text-center'>
-    <h2 className='text-5xl text-rose-600 uppercase font-bold
+    <h2 className='text-5xl text-rose-400 uppercase font-bold
     '> Anup Chhetri</h2>
-    <h3 className='py-3 text-2xl'>Developer</h3>
+    <h3 className='py-3 text-2xl text-blue-400'>Developer</h3>
 <p  className='max-w-xl font-light text-end text-gray-500 '>
     Hello<span className='animate-pulse text-4xl'>👋</span>Welcome to my
     Website. I am a student at islington college. I love to work on Web development, Mobile dev and others projects.
@@ -44,13 +44,13 @@ window.addEventListener('scroll', function (){
          key={id}
          target='_blank'
          rel='noopener noreferrer'
-          className='cursor-pointer duration-500 hover:text-rose-600'>
+          className='cursor-pointer  duration-500 hover:text-rose-600'>
             {icon}</a>
         ) ) }
         </div>
         <div>
             <img src={avatar} alt='avatar' className='w-60 h-60 md:w-72 md:h-72 object-cover object-top bg-gradient-to-b from-rose-600 rounded-xl pt-5' />
-            <a href ='/Anup-CV.pdf' download={true} className='flex items-centre justify-center mt-10 bg-gradient-to-r from-rose-600 to-teal-500 text-white py-2 rounded-lg'>
+            <a href ='/anup.pdf' download={true} className='flex items-centre justify-center mt-10 bg-gradient-to-r from-rose-600 to-teal-500 text-white py-2 rounded-lg'>
                 Resume 
             </a>
         </div>

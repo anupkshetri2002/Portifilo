@@ -9,5 +9,7 @@
   }
 }
 .hide-down-arrow{
-  display: none;
+  opacity: 0;
+  transition: ease-in-out;
+  animation-duration: 10000ms;
 }
